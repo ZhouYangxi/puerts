@@ -619,6 +619,15 @@
 // __sun is defined by the GCC compiler.
 // __i386 is defined by the Sun and GCC compilers.
 // __sparc is defined by the Sun and GCC compilers.
+#elif defined(__SWITCH__)
+    #define EA_PLATFORM_SWITCH 1
+    #define EA_PROCESSOR_ARM64 1
+    #define EA_SYSTEM_LITTLE_ENDIAN 1
+    #define EA_PLATFORM_DESCRIPTION "Nintendo Switch"
+    #define EA_PLATFORM_POSIX 1
+    #define EA_PLATFORM_MOBILE 1
+    #define EASTL_DEBUG_BREAK_OVERRIDE 1 // disable it
+
 #elif defined(__EMSCRIPTEN__) || defined(__wasm__) || defined(__wasm32__) || defined(__wasm64__)
     #define EA_PROCESSOR_EMSCRIPTEN 1
     #define EA_SYSTEM_LITTLE_ENDIAN 1

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File make_switch_direct.ps1:*)"
+    ]
+  }
+}
